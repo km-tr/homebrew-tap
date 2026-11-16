@@ -1,25 +1,25 @@
 class WorktreeLink < Formula
   desc "Automatically create symlinks from a main worktree to a new worktree based on .worktreelinks patterns"
   homepage "https://github.com/km-tr/worktree-link"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.3/worktree-link-aarch64-apple-darwin.tar.xz"
-      sha256 "cdb30451f9cf720780caedfe8fb61f68017ca87007ed8371b6ba123db374e8bc"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.4/worktree-link-aarch64-apple-darwin.tar.xz"
+      sha256 "15f5193ecd4895c9a9220f9f3b8459c3e3abbc12b3bc4d62df5daf8d47146975"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.3/worktree-link-x86_64-apple-darwin.tar.xz"
-      sha256 "ec4dc39a6377772320ccc27285425ef18afd8f96eaba04f746a8a8d6a70d20ec"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.4/worktree-link-x86_64-apple-darwin.tar.xz"
+      sha256 "69e06e459e1c647bda47a66d08311c2d83788be6392d22864771ea0c6fd4adba"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.3/worktree-link-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a140869987f44cdd8ec462e226982804769093c74960884fb69681c63cbc5535"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.4/worktree-link-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "114d1754da0e44532896eb22410c5f2f17f0f55d1d828b7ce8b7f0da4c321b4e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.3/worktree-link-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d8da314aaac0163d232a5f0a05eb3f8fc6c61ce4c6707487daadf1228ab24147"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.4/worktree-link-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3c83a64e199402a7684a90743cc518489ff6ee37716224d0717167b5c34c065e"
     end
   end
   license "MIT"
@@ -63,10 +63,18 @@ class WorktreeLink < Formula
   end
 
   def install
-    bin.install "worktree-link" if OS.mac? && Hardware::CPU.arm?
-    bin.install "worktree-link" if OS.mac? && Hardware::CPU.intel?
-    bin.install "worktree-link" if OS.linux? && Hardware::CPU.arm?
-    bin.install "worktree-link" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "worktree-link"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "worktree-link"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "worktree-link"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "worktree-link"
+    end
 
     install_binary_aliases!
 
