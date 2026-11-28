@@ -1,25 +1,25 @@
 class WorktreeLink < Formula
   desc "Automatically create symlinks from a main worktree to a new worktree based on .worktreelinks patterns"
   homepage "https://github.com/km-tr/worktree-link"
-  version "0.1.6"
+  version "0.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.6/worktree-link-aarch64-apple-darwin.tar.xz"
-      sha256 "8b7547e67adbe7c37b393534fe46748cecacb02c748c279529d9bab05256e177"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.7/worktree-link-aarch64-apple-darwin.tar.xz"
+      sha256 "1fbb308d6a697ad5d5b60bf02492b261dbaa3b5d5ab0dc8b8195151fb453383f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.6/worktree-link-x86_64-apple-darwin.tar.xz"
-      sha256 "762f46b8d5161a9911b6c388a307a1e5904b2462b9c21cd8cc91f8810993865e"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.7/worktree-link-x86_64-apple-darwin.tar.xz"
+      sha256 "bc6a8d1ed6a39585e1a0249c79cb26a0cf7ad8333880d2d5400ed9a50f1bc288"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.6/worktree-link-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "2c9ede5433c05799fb827db82b773c6713ed0276552a8ac58219d8dad1968b33"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.7/worktree-link-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0dfee7ffc57c261c25b1659de0e75d4c2b24839e59a198674a37b3f62276ed5f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.6/worktree-link-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "259fbd38b7273e40fdc1f6e0f613937a2c45fb53eb35b5da609d9f53089bc6d0"
+      url "https://github.com/km-tr/worktree-link/releases/download/v0.1.7/worktree-link-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8f2181d674433034b4a19a858a6d2dca4ff70799135b71922e54e7bd02893df5"
     end
   end
   license "MIT"
